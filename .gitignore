@@ -1,0 +1,8 @@
+# exclude everything
+/
+
+# except the readme
+!README.md
+
+# include nixos dir
+!/etc/nixos/*
