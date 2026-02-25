@@ -19,4 +19,10 @@ horrifying contraption I carry on a usb drive to scare people
 6. Connect to the internet if needed
 7. Start a nix shell with git - `nix-shell -p git`
 8. Clone this repository into the root of the filesystem
+- `cd /`
+- `git clone [URL]`
+- `cp -r -a portable-nixos/* /`
+- `rm -rf portable-nixos`
 9. `nixos-rebuild switch`
+
+You may need to re-run `nixos-generate-config` to regenerate the hardware configuration for different devices.
