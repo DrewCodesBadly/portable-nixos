@@ -2,8 +2,9 @@
 horrifying contraption I carry on a usb drive to scare people
 
 # Setting up a new usb
+There are other documented ways to install NixOS, if you use one of those continue from step 5.
 1. Download the NixOS graphical installer [here](https://nixos.org/download/)
-2. Write it to another USB, preferably (you could probably use the same one and install to another partition, it's just annoying)
+2. Write it to another USB
 - On linux, run `fdisk -l` to find the drive then ensure unmounted (`sudo umount /dev/[DRIVE]*`)
 - then run `sudo dd bs=4M conv=fsync oflag=direct status=progress if=[ISO PATH] of=/dev/[DRIVE]`
 - you could also use tools like rufus
@@ -21,7 +22,7 @@ horrifying contraption I carry on a usb drive to scare people
 8. Clone this repository into the root of the filesystem
 - `cd /`
 - `git clone [URL]`
-- `cp -r -a portable-nixos/* /`
+- `cp -r portable-nixos/. /`
 - `rm -rf portable-nixos`
 9. `nixos-rebuild switch`
 
